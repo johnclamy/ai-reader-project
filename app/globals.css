@@ -4,7 +4,6 @@
 
 /* @custom-variant dark (&:is(.dark *)); */
 
-@import "tailwindcss";
 
 /* Optional: Add Shadcn animation plugin if you use it */
 @plugin "tailwindcss-animate";
