@@ -6,7 +6,7 @@
 
 
 /* Optional: Add Shadcn animation plugin if you use it */
-@plugin "tailwindcss-animate";
+/* @plugin "tailwindcss-animate"; */
 
 @theme {
   /* --- Shadcn UI Semantic Color Mappings --- */
