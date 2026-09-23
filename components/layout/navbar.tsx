@@ -25,8 +25,30 @@ const Navbar = () => {
                     <span className="hidden md:inline-block font-heading text-xl font-semibold tracking-tight text-foreground transition-colors group-hover:text-primary">
                         Cozy Reader
                     </span>
-                </Link>    
-            </div>            
+                </Link>            
+
+                {/* RIGHT SIDE: Navigation Links */}
+                <nav className="flex items-center gap-6">
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href || pathname.startsWith(`${link.href}/`)
+
+                        return (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={`relative font-ui text-sm font-medium transition-colors hover:text-primary ${isActive ? "text-primary" : "text-muted-foreground"}`}
+                            >
+                                {link.label}
+                
+                                {/* Subtle "bookmark" underline for active state */}
+                                {isActive && (
+                                    <span className="absolute -bottom-1 left-0 right-0 mx-auto h-0.5 w-4 rounded-full bg-primary" />
+                                )}
+                            </Link>
+                        )
+                    })}
+                </nav>
+            </div>         
         </header>
     )
 }
