@@ -43,9 +43,9 @@ export default function RootLayout({
         <html lang="en" className={`${heading.variable} ${body.variable} ${ui.variable}`}>
             <body className="min-h-screen bg-background text-foreground antialiased">
                 <Navbar />
-                <main className="mx-auto max-w-5xl px-4 py-8 md:px-6">
+                <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
                     {children}
-                </main>
+                </div>
             </body>
         </html>
     )
