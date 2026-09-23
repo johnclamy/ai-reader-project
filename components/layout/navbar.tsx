@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 {/* LEFT SIDE: Logo & Title */}
                 <Link href="/" className="group flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-primary/20 bg-[#f5efe8] shadow-sm transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-primary/20 bg-[#f5efe8] shadow-sm transition-colors group-hover:bg-[#f7efe7] group-hover:text-primary-foreground">
                         <LogoMark />
                     </div>
                     {/* Title: Hidden on xs/sm, visible on md and up */}
