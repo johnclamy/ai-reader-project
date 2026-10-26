@@ -3,8 +3,13 @@ import { type Post } from '../page'
 import { notFound } from 'next/navigation'
 
 
-const BlogPost = async ({ params, }: { params: Promise<{ slug: string }> }) => {
-    const { slug } = await params
+type BlogPostProps = {
+    params: Promise<{ slug: string }>
+}
+
+
+const BlogPost = async (props: BlogPostProps) => {
+    const { slug } = await props.params
     const id = Number(slug)
 
     if (!Number.isInteger(id) || id < 1) {
