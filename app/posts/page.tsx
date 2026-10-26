@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import getPosts from './posts'
 
 
@@ -15,7 +16,7 @@ const Blog = async () => {
         <article className="space-y-12 md:space-y-14">
             {postsData.posts.map((post: Post) => (
                 <section className="group" key={post.id}>
-                    <a href={`/posts/${post.id}`} className="block transition-opacity duration-200 hover:opacity-70">
+                    <Link href={`/posts/${post.id}`} className="block transition-opacity duration-200 hover:opacity-70">
                         <div className="group">
                             <h2 className="text-xl sm:text-2xl font-medium tracking-tight text-[#0a0a0a] leading-snug group-hover:underline decoration-1 underline-offset-4 decoration-[#b0b0b0] transition-all">
                                 {post.title}
@@ -24,7 +25,7 @@ const Blog = async () => {
                                 {post.body}
                             </p>
                         </div>                            
-                    </a>
+                    </Link>
                 </section>
             ))}
         </article>
