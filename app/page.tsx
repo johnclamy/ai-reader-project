@@ -1,11 +1,11 @@
-import Paragraph from '../components/Paragraph'
+import Hero from '../components/Hero'
 
 
-export default function Home() {
-    return (
-        <Paragraph>
-            This is a test app for working in Linux without breaking changes 
-            due to <i className="font-bold text-amber-900">Turbopack</i>.
-        </Paragraph>
-    )
-}
+const Home = () => (
+    <main className="flex-1 flex items-center justify-center">
+        <Hero />
+    </main>
+)
+
+
+export default Home
