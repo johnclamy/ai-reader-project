@@ -1,4 +1,6 @@
 import type { Metadata } from "next"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import "./globals.css"
 
 
@@ -13,8 +15,12 @@ export default function RootLayout({ children, }: Readonly<{
 }>) {
     return (
         <html lang="en">
-            <body className={"bg-[#fafafa] font-sans antialiased text-[#1e1e1e]"}>
+            <body className={"bg-[#fafafa] font-sans antialiased text-[#1e1e1e] min-h-screen flex flex-col"}>
+                <header className="w-full border-b border-[#eaeaea]">
+                    <Navbar />
+                </header>
                 {children}
+                <Footer />
             </body>
         </html>
     )
