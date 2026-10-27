@@ -10,3 +10,14 @@ export default async function getPosts() {
   
     return res.json()
 }
+
+
+export async function getPost(id: number) {
+    const res = await fetch(`${POSTS_URL}/${id}`)
+
+    if (!res.ok) {
+        throw new Error('Failed to fetch post')
+    }
+  
+    return res.json()
+}
