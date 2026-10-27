@@ -1,3 +1,9 @@
 @import "tailwindcss";
 
 
+/* Rule to prevent flickering on fast loads */
+.spinner-hint {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  animation-delay: 150ms; /* Delay showing the spinner */
+}
