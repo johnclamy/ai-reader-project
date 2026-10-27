@@ -1,10 +1,19 @@
-import getPost from './post'
+import getPosts, { getPost } from '../../../lib/data'
 import { type Post } from '../page'
 import { notFound } from 'next/navigation'
 
 
 type BlogPostProps = {
     params: Promise<{ slug: string }>
+}
+
+
+export async function generateStaticParams() {
+    const { posts }: { posts: Post[] } = await getPosts()
+
+    return posts.map((post) => ({
+        slug: post.id.toString(),
+    }))
 }
 
 
